@@ -1,0 +1,118 @@
+<html>
+<title>Manjaro Home</title>
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+ <style>
+   body {
+        font-family: 'Open Sans', Normal;
+        font-weight: 400;
+        font-size: 14px;
+        }
+ </style>
+</head>
+
+<body>
+<meta charset="utf-8">
+
+<center>
+
+<!--Imagem -->
+<br><br><br><br><img src="imagens/Logo-Manjaro.png" width="700" height="150" alt=""><br><br>
+
+<!--Pesquisa -->
+<form id="searchForm" action="" method="" onSubmit="sitesearch(this)">
+
+<!--Multipla escolha-->
+<fieldset style="width: 50%;">
+<legend title="">
+Enjoy the simplicity :)</legend>
+
+<input id="hiddenquerywiki" type="hidden" name='search'>
+<input id="hiddenquery" type="hidden" name="q">
+<input id="hiddenqueryaur" type="hidden" name="K">
+<input id="hiddenqueryinternal" type="hidden" name="query">
+<input type="hidden" name="do" value="process">
+<input type="hidden" name="showposts" value="0">
+<input type="hidden" name="quicksearch" value="1">
+<input type="hidden" name="s" value="">
+
+<input type="radio" name="se" id="pradio1" value="1" checked />
+<label for="pradio1"><a href="https://www.google.com.br" target="_blank" style="color: black;">Google</a></label>
+<input type="radio" name="se" id="pradio1" value="2" />
+<label for="pradio1"><a href="https://ixquick.com" target="_blank" style="color: black;">Ixquick</a></label>
+<input type="radio" name="se" id="pradio2" value="3" />
+<label for="pradio2"><a href="http://www.manjaro-linux.com.br" target="_blank" style="color: black;">Fórum Manjaro BR</a></label>
+<input type="radio" name="se" id="pradio3" value="4" />
+<label for="pradio3"><a href="http://wiki.manjaro.org/index.php?title=P%C3%A1gina_Principal" target="_blank" style="color: black;">Wiki</a></label>
+<input type="radio" name="se" id="pradio4" value="5" />
+<label for="pradio4"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label><br><br>
+</div>
+
+<!--Campo pesquisa-->
+<input name="searchfor" type="text" style="width: 390px;"> <input type="submit" value="Pesquisar" />
+</fieldset>
+
+<!--Função JScript-->
+<script type="text/javascript">
+
+function switchaction(curobj, index){
+if (index==0){ //se Google
+document.getElementById("searchForm").action="http://www.google.com.br/search"
+document.getElementById("searchForm").method="get"
+document.getElementById("hiddenquery").value=curobj.searchfor.value
+document.getElementById("hiddenqueryinternal").value=""
+}
+
+if (index==1){ //se Start Page
+document.getElementById("searchForm").action="https://ixquick.com/do/search"
+document.getElementById("searchForm").method="get"
+document.getElementById("hiddenquery").value=curobj.searchfor.value
+document.getElementById("hiddenqueryinternal").value=""
+}
+
+if (index==2){ //se Manjaro Br
+document.getElementById("searchForm").action="http://www.manjaro-linux.com.br/forum/pesquisar.php"
+document.getElementById("searchForm").method="get"
+document.getElementById("hiddenquery").value=curobj.searchfor.value
+document.getElementById("hiddenqueryinternal").value=""
+}
+
+if (index==3){ //se Wiki
+document.getElementById("searchForm").action="http://wiki.manjaro.org/index.php"
+document.getElementById("searchForm").method="get"
+document.getElementById("hiddenquerywiki").value=curobj.searchfor.value
+document.getElementById("hiddenqueryinternal").value=""
+}
+if (index==4){ //se AUR
+document.getElementById("searchForm").action="https://aur.archlinux.org/packages.php"
+document.getElementById("searchForm").method="get"
+document.getElementById("hiddenqueryaur").value=curobj.searchfor.value
+document.getElementById("hiddenqueryinternal").value=""
+}
+}
+
+function sitesearch(curobj){
+for (var i=0; i< document.getElementById("searchForm").se.length; i++){ //loop through radio to see which is checked
+if (document.getElementById("searchForm").se[i].checked==true)
+switchaction(curobj, i)
+}
+}
+
+</script>
+</form>
+
+<!--Final -->
+<br><br><table align="center" bgcolor="#408440" width="50%">
+<tr>
+<td></td>
+</tr>
+</table>
+<div>
+Inspirado no projeto de <a href="http://pyther.net/projects/arch-home/" target="_blank">Matthew Gyurgyik</a><br>
+<a href="http://bluefish.openoffice.nl/" target="_blank">Made with Bluefish HTML editor</a> by <a href=""http://robsonpc.unaux.com/bio.php" target="_blank">robsonpc</a>. © COPYRIGHT MANJARO LINUX
+
+</div>
+</center>
+</body>
+</html>
