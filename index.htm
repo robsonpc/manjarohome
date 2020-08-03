@@ -1,7 +1,7 @@
 <html>
 <title>Manjaro Home</title>
 
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
  <style>
    body {
@@ -9,24 +9,54 @@
         font-weight: 400;
         font-size: 14px;
         }
+    img {
+      	max-width:80%;
+      	height:auto;
+        }
+        
+        input[type=text] {
+    		width: 350px;
+    		box-sizing: border-box;
+    		border: 2px solid #ccc;
+    		border-radius: 5px;
+    		font-size: 13px;
+    		background-color: white;
+    		background-image: url('imagens/searchicon.png');
+    		background-position: 10px 10px; 
+    		background-repeat: no-repeat;
+    		padding: 12px 20px 12px 40px;
+    		-webkit-transition: width 0.4s ease-in-out;
+    		transition: width 0.4s ease-in-out;
+      	}
+   	   input[type=text]:focus {
+        width: 100%;
+         }
+         fieldset{
+          border:1px solid green;
+ 			 background-color:transparent;
+ 			 margin-left: 2px;
+			 
+ 			 -moz-border-radius:7px;
+          -webkit-border-radius:7px;
+         border-radius:7px;
+         }
  </style>
 </head>
 
 <body>
-<meta charset="utf-8">
+
 
 <center>
 
 <!--Imagem -->
-<br><br><br><br><img src="imagens/Logo-Manjaro.png" width="700" height="150" alt=""><br><br>
+<br><br><br><br><img src="imagens/Logo-Manjaro.png" style="display:inline" alt=""><br><br>
 
 <!--Pesquisa -->
 <form id="searchForm" action="" method="" onSubmit="sitesearch(this)">
 
 <!--Multipla escolha-->
 <fieldset style="width: 50%;">
-<legend title="">
-Enjoy the simplicity :)</legend>
+<legend title="">Enjoy the simplicity :)</legend>
 
 <input id="hiddenquerywiki" type="hidden" name='search'>
 <input id="hiddenquery" type="hidden" name="q">
@@ -40,17 +70,23 @@ Enjoy the simplicity :)</legend>
 <input type="radio" name="se" id="pradio1" value="1" checked />
 <label for="pradio1"><a href="https://www.google.com.br" target="_blank" style="color: black;">Google</a></label>
 <input type="radio" name="se" id="pradio1" value="2" />
-<label for="pradio1"><a href="https://ixquick.com" target="_blank" style="color: black;">Ixquick</a></label>
-<input type="radio" name="se" id="pradio2" value="3" />
-<label for="pradio2"><a href="http://www.manjaro-linux.com.br" target="_blank" style="color: black;">Fórum Manjaro BR</a></label>
-<input type="radio" name="se" id="pradio3" value="4" />
-<label for="pradio3"><a href="http://wiki.manjaro.org/index.php?title=P%C3%A1gina_Principal" target="_blank" style="color: black;">Wiki</a></label>
-<input type="radio" name="se" id="pradio4" value="5" />
-<label for="pradio4"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label><br><br>
+
+<label for="pradio2"><a href="https://duckduckgo.com/" target="_blank" style="color: black;">DuckDuckGo</a></label>
+<input type="radio" name="se" id="pradio1" value="3" />
+
+<label for="pradio3"><a href="http://www.manjaro-linux.com.br" target="_blank" style="color: black;">Fórum Manjaro BR</a></label>
+<input type="radio" name="se" id="pradio2" value="4" />
+
+<label for="pradio4"><a href="http://wiki.manjaro.org/index.php?title=P%C3%A1gina_Principal" target="_blank" style="color: black;">Wiki</a></label>
+<input type="radio" name="se" id="pradio3" value="5" />
+
+<label for="pradio5"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label><br><br>
 </div>
 
 <!--Campo pesquisa-->
-<input name="searchfor" type="text" style="width: 390px;"> <input type="submit" value="Pesquisar" />
+<form>
+  <input type="text" name="searchfor" placeholder="Pesquisar..">
+</form>
 </fieldset>
 
 <!--Função JScript-->
@@ -64,8 +100,8 @@ document.getElementById("hiddenquery").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
 }
 
-if (index==1){ //se Start Page
-document.getElementById("searchForm").action="https://ixquick.com/do/search"
+if (index==1){ //se DuckSuckGo
+document.getElementById("searchForm").action="https://duckduckgo.com/"
 document.getElementById("searchForm").method="get"
 document.getElementById("hiddenquery").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
@@ -109,8 +145,8 @@ switchaction(curobj, i)
 </tr>
 </table>
 <div>
-Inspirado no projeto de <a href="http://pyther.net/projects/arch-home/" target="_blank">Matthew Gyurgyik</a><br>
-<a href="http://bluefish.openoffice.nl/" target="_blank">Made with Bluefish HTML editor</a> by <a href="http://robsonpc.unaux.com/" target="_blank">robsonpc</a>. © COPYRIGHT MANJARO LINUX
+Inspirado no projeto de <a href="https://pyther.net/about/" target="_blank">Matthew Gyurgyik</a><br>
+By <a href="https://robsonpc.heliohost.org/" target="_blank">robsonpc</a>. © COPYRIGHT MANJARO LINUX
 
 </div>
 </center>
