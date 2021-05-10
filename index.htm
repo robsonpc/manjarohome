@@ -63,7 +63,7 @@
 <input id="hiddenqueryforum" type="hidden" name="keywords">
 <input id="hiddenquerywiki" type="hidden" name="search">
 <input id="hiddenqueryaur" type="hidden" name="K">
-<input id="hiddenqueryman" type="hidden" name="X">
+<input id="hiddenqueryman" type="hidden" name="">
 <input id="hiddenqueryinternal" type="hidden" name="query">
 
 <input type="hidden" name="do" value="process">
@@ -138,7 +138,6 @@ document.getElementById("hiddenqueryinternal").value=""
 if (index==5){ //se Manjariando
 document.getElementById("searchForm").action="https://manjariando.com.br/"
 document.getElementById("searchForm").method="get"
-document.getElementById("hiddenqueryman").value=X.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
 }
 }
