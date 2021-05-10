@@ -58,7 +58,8 @@
 <fieldset style="width: 50%;">
 <legend title="">Enjoy the simplicity :)</legend>
 
-<input id="hiddenquery" type="hidden" name="keywords">
+<input id="hiddenquery" type="hidden" name="q">
+<input id="hiddenqueryforum" type="hidden" name="q">
 <input id="hiddenquerywiki" type="hidden" name="search">
 <input id="hiddenqueryaur" type="hidden" name="K">
 <input id="hiddenqueryman" type="hidden" name="s">
@@ -116,7 +117,7 @@ document.getElementById("hiddenqueryinternal").value=""
 if (index==2){ //se Manjaro Br
 document.getElementById("searchForm").action="http://www.manjaro-linux.com.br/"
 document.getElementById("searchForm").method="get"
-document.getElementById("hiddenquery").value=curobj.searchfor.value
+document.getElementById("hiddenqueryforum").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
 }
 
