@@ -80,9 +80,10 @@
 <label for="pradio4"><a href="http://wiki.manjaro.org/index.php?title=P%C3%A1gina_Principal" target="_blank" style="color: black;">Wiki</a></label>
 <input type="radio" name="se" id="pradio3" value="5" />
 
-<label for="pradio5"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label><br><br>
-
-<label for="pradio6"><a href="https://manjariando.com.br" target="_blank" style="color: black;">Manjariando</a></label>
+<label for="pradio5"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label>
+<input type="radio" name="se" id="pradio4" value="6" />
+	
+<label for="pradio6"><a href="https://manjariando.com.br" target="_blank" style="color: black;">Manjariando</a></label><br><br>
 
 </div>
 
@@ -129,7 +130,7 @@ document.getElementById("searchForm").method="get"
 document.getElementById("hiddenqueryaur").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
 }
-	}
+	
 if (index==5){ //se Manjariando
 document.getElementById("searchForm").action="https://manjariando.com.br"
 document.getElementById("searchForm").method="get"
@@ -156,7 +157,7 @@ switchaction(curobj, i)
 </table>
 <div>
 Inspirado no projeto de <a href="https://pyther.net/about/" target="_blank">Matthew Gyurgyik</a><br>
-By <a href="https://linktr.ee/robsonpc" target="_blank">robsonpc</a>. © COPYRIGHT MANJARO LINUX
+By <a href="https://linktr.ee/robsonpc" target="_blank">robson_cordeiro</a>. © COPYRIGHT MANJARO LINUX
 
 </div>
 </center>
