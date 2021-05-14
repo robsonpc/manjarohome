@@ -77,10 +77,10 @@
 <label for="pradio2"><a href="https://duckduckgo.com/" target="_blank" style="color: black;">DuckDuckGo</a></label>
 
 <input type="radio" name="se" id="pradio1" value="3" />
-<label for="pradio3"><a href="http://www.manjaro-linux.com.br" target="_blank" style="color: black;">Fórum Manjaro BR</a></label>
+<label for="pradio3"><a href="https://www.manjaro-linux.com.br" target="_blank" style="color: black;">Fórum Manjaro BR</a></label>
 
 <input type="radio" name="se" id="pradio2" value="4" />
-<label for="pradio4"><a href="http://wiki.manjaro.org" target="_blank" style="color: black;">Wiki</a></label>
+<label for="pradio4"><a href="https://wiki.manjaro.org" target="_blank" style="color: black;">Wiki</a></label>
 
 <input type="radio" name="se" id="pradio3" value="5" />
 <label for="pradio5"><a href="https://aur.archlinux.org" target="_blank" style="color: black;">AUR</a></label>
@@ -135,10 +135,10 @@ document.getElementById("hiddenqueryinternal").value=""
 }
 	
 if (index==5){ //se Manjariando
-document.getElementById("searchForm").action="https://manjariando.com.br/?s"
+document.getElementById("searchForm").action="https://manjariando.com.br/?s="
 document.getElementById("searchForm").method="get"
 document.getElementById("hiddenqueryman").value=curobj.searchfor.value
-
+document.getElementById("hiddenqueryinternal").value=""
 }
 }
 
