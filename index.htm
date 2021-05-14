@@ -102,7 +102,7 @@
 
 function switchaction(curobj, index){
 if (index==0){ //se Google
-document.getElementById("searchForm").action="http://www.google.com.br/search"
+document.getElementById("searchForm").action="https://www.google.com.br/search"
 document.getElementById("searchForm").method="get"
 document.getElementById("hiddenquery").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
@@ -116,14 +116,14 @@ document.getElementById("hiddenqueryinternal").value=""
 }
 
 if (index==2){ //se Manjaro Br
-document.getElementById("searchForm").action="http://www.manjaro-linux.com.br/search.php"
+document.getElementById("searchForm").action="https://www.manjaro-linux.com.br/search.php"
 document.getElementById("searchForm").method="get"
 document.getElementById("hiddenqueryforum").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
 }
 
 if (index==3){ //se Wiki
-document.getElementById("searchForm").action="http://wiki.manjaro.org/index.php"
+document.getElementById("searchForm").action="https://wiki.manjaro.org/index.php"
 document.getElementById("searchForm").method="get"
 document.getElementById("hiddenquerywiki").value=curobj.searchfor.value
 document.getElementById("hiddenqueryinternal").value=""
@@ -139,7 +139,7 @@ if (index==5){ //se Manjariando
 document.getElementById("searchForm").action="https://manjariando.com.br/"
 document.getElementById("searchForm").method="get"
 
-document.getElementById("hiddenqueryinternal").value=""	
+	
 }
 }
 
